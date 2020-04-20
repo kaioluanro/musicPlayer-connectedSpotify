@@ -68,6 +68,7 @@
         // Ready
         player.addListener('ready', ({ device_id }) => {
           console.log('Ready with Device ID', device_id);
+          document.getElementById("App").style.visibility = 'visible';          
         });
 
         // Not Ready

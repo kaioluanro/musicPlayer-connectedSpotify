@@ -105,10 +105,11 @@ class App extends Component {
     }})
   }
 
+ 
   render() {
-    return (
-      <div className="App">
-        {}
+    return ( 
+      
+      <div id='App' className="App">
         {()=>this.getHashParams()}
         <h3>
           Now Playing: { this.state.nowPlaying.name } <br/>
@@ -118,22 +119,23 @@ class App extends Component {
         <div>
           <img src={this.state.image} style={{ width: 500, height:500 }}/>
         </div>
+        
         { this.state.loggedIn &&
-          <button onClick={()=>{
+          <button id='button1' onClick={()=>{
             this.requestPrev();
             setTimeout(()=>this.artist(),1000) }}>
             Preview
           </button>
         }
         { this.state.loggedIn &&
-          <button onClick={()=>{
+          <button id='button2' onClick={()=>{
             this.requestPlay();
             setTimeout(()=>this.artist(),1000) }}>
             Play
           </button>
         }
         { this.state.loggedIn &&
-          <button onClick={()=>{
+          <button id='button3' onClick={()=>{
             this.requestNext();
             setTimeout(()=>this.artist(),1000) }}>
             Next
@@ -141,6 +143,7 @@ class App extends Component {
         }
 
       </div>
+      
     );
   }
 }
